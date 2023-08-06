@@ -111,8 +111,26 @@ public SelenideElement // ბრალოდ ზოგადი გვერდ�
 public SelenideElement // გაგზავნის ღილაკი
    sendbutton = $("#btn2");
 
-public SelenideElement
+public SelenideElement  // კომპანიის სახელწოდება - ელემენტი
    //redborder = $(".form_group");
    redborder2 = $(byXpath("/html/body/div[6]/div/div[2]/div[1]/form/div[1]/input"));
 
+public SelenideElement // საიდენტიფიკაციო კოდი - ელემენტი
+   saidentifikaciokodi = $(byAttribute("placeholder","საიდენტიფიკაციო კოდი"));
+
+   public SelenideElement // ფაქტიური მისამართი - ელემენტი
+           misamarti = $(byAttribute("placeholder","ფაქტიური მისამართი"));
+
+   public SelenideElement // საკონტაქტო ნომერი - ელემენტი
+           contactnumber  = $(byAttribute("placeholder","საკონტაქტო ნომერი"));
+
+   public SelenideElement // როდის გსურთ შეკვეთის მიღება? - ელემენტი
+           acceptorder  = $(byAttribute("placeholder","როდის გსურთ შეკვეთის მიღება?"));
+
+   public SelenideElement // email - ელემენტი
+           email  = $(byAttribute("placeholder","ელ.ფოსტა"));
+
+   public SelenideElement // ელემენტი უნდა ჩანდეს შავად
+
+   blackborder2 = $(byXpath("/html/body/div[6]/div/div[2]/div[1]/form/div[1]/input"));
 }

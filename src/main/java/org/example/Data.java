@@ -1,5 +1,5 @@
 package org.example;
 
 public class Data {
-    String K = "კალამი";
+    String A = "კალამი";
 }
