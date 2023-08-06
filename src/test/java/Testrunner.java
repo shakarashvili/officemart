@@ -1,23 +1,22 @@
 
-import com.codeborne.selenide.As;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.conditions.Visible;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.checkerframework.checker.units.qual.C;
 import org.example.Beforetest;
 import org.example.Homesteps;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class Testrunner extends Homesteps {
+
+
 
     @Description("test1 - Clicking on the search button should bring up the input field")
     @Severity(SeverityLevel.CRITICAL)
@@ -35,10 +34,12 @@ public class Testrunner extends Homesteps {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void settextinsearchline() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test2();
         Assert.assertTrue(Pen1.is(Condition.visible));
+        soft.assertAll();
         //Assert.assertEquals(Pen1.getCssValue("'კალამი'"),"'კალამი'");
     }
 
@@ -46,11 +47,13 @@ public class Testrunner extends Homesteps {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void setuncorrecttext() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test3();
         //Assert.assertTrue(delphyresult.is(Condition.not(Condition.visible)));
         Assert.assertTrue(delphyresult.is(Condition.visible));
+        soft.assertAll();
     }
 
     @Description("test4 - By clicking on the button to add a specific product to the cart")
@@ -70,20 +73,24 @@ public class Testrunner extends Homesteps {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkoutproductinbasket() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test5();
         Assert.assertTrue(myproductpen.is(Condition.visible));
+        soft.assertAll();
     }
 
     @Description("test6 - After adding the product, go to the cart and check out color")
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkoutproductcolor() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test6();
         Assert.assertTrue(colorofmyproduct.is(Condition.not(Condition.visible)));
+        soft.assertAll();
         // ამ პროდუქტზე ფერი არ ჩანს და კარგიც არის რომ უარყოფის ქონდიშენი გავუწერეთ
     }
 
@@ -91,20 +98,24 @@ public class Testrunner extends Homesteps {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkoutproductcode() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test5();
         Assert.assertTrue(myproductpen.is(Condition.visible));
+        soft.assertAll();
     }
 
     @Description("test8 - After adding the product, go to the cart and check out number of the product")
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkoutproductnumber() {
+        SoftAssert soft = new SoftAssert();
         Beforetest Beforetest1 = new Beforetest();
         Beforetest1.Beforetest1();
         Test8();
         Assert.assertTrue(sumoftheproducts.is(Condition.visible));
+        soft.assertAll();
     }
 
     @Description("test9 - After adding the product, go to the cart and check out price of the product")

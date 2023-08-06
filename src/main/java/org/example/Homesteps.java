@@ -1,20 +1,14 @@
 package org.example;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.commands.ShouldBe;
 import io.qameta.allure.Step;
-import org.checkerframework.checker.units.qual.C;
-import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.Keys;
-import org.testng.Assert;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.*;
 
 public class Homesteps extends Homeobjects {
 
-    Data A = new Data();  // ეს
+
 
     @Step("this method is for to find search line on the website")
     public void Searchline() {
