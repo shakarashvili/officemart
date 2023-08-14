@@ -24,7 +24,7 @@ public class Homesteps extends Homeobjects {
 
     }
 
-    // Data1 text = new Data1() {   ვერაფრით დატა ვერ შემოვაექსთენდე !!
+    // Data1 text = new Data1() {
     @Step("write text in search line")
     public void Writepaninsearchline() {
 
@@ -312,7 +312,7 @@ public class Homesteps extends Homeobjects {
         String address = faker.address().cityName();
         String numbers = faker.animal().name();
         String numbersss = faker.number().digit();
-         Integer between = faker.number().numberBetween(1,10);   // აი აქ ვერ დავწერე შორის
+         Integer between = faker.number().numberBetween(1,10);
         Search.click();
         searchline2.setValue(number).pressEnter();
         Search.click();
@@ -328,7 +328,7 @@ public class Homesteps extends Homeobjects {
 
     }
 
-    @Step("")
+    @Step("ციკლი")
     public void Test43() {
         Search.click();
         searchline2.setValue("კალამი").pressEnter();

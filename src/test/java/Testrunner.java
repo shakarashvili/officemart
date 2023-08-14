@@ -22,7 +22,7 @@ public class Testrunner extends Homesteps {
         @Test
         public void clickonsearch() {
             Beforetest Beforetest1 = new Beforetest();
-            Beforetest1.Beforetest1(); // ეს კი მუშაობს მაგრამ ცოტა ვერ მივხვდი
+            Beforetest1.Beforetest1();
             Searchline();
             //Assert.assertTrue($(byClassName("search_button")).is(Condition.enabled));
             // Assert.assertEquals(Searchbutton.getCssValue("2"), "1"); შედარების ასერტი
@@ -312,14 +312,13 @@ public class Testrunner extends Homesteps {
             sendbtn();
             // Assert.assertTrue(redborder2.is(Condition.visible));  // არა ეს არ კმარა რა
             // Assert.assertEquals($("/html/body/div[6]/div/div[2]/div[1]/form/div[1]/input").getCssValue("color"),"srgb(1, 0, 0)");
-            // აი ეს დაინახა ელემენტი მაგრამ გეთზე ვეღარ დაიჭირა მერე უკვე
+
             String companyline = $(byAttribute("placeholder", "კომპანიის სახელწოდება")).getCssValue("border-color");
             System.out.println(companyline);
             String hex = Color.fromString(companyline).asHex();
             System.out.println(hex);
             // Assert.assertEquals($(byAttribute("placeholder","კომპანიის სახელწოდება")).getCssValue("border-color"),"rgb(255, 0, 0)");
-            // Assert.assertEquals($(".form_group",1).getCssValue("color"),"srgb(1, 0, 0)"); //  აი ამას ყველა ვარიანტში უნდა ემუშავა რომ დაენახა წითელი სააზღვრები
-
+            // Assert.assertEquals($(".form_group",1).getCssValue("color"),"srgb(1, 0, 0)");
         }
 
         @Description("20 - The field 'Identification code' should be red ")
@@ -617,7 +616,7 @@ public class Testrunner extends Homesteps {
             System.out.println(companyline9);
             String hex = Color.fromString(companyline9).asHex();
             System.out.println(hex);
-            Assert.assertTrue(contactnumber.is(Condition.visible));  // ასერშენი გაუწერე
+            Assert.assertTrue(contactnumber.is(Condition.visible));
 
         }
 
